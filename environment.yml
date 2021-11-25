@@ -2,5 +2,6 @@ name: qqbar2mumu
 channels:
   - conda-forge
 dependencies:
-  - uproot=4.1.8
-  - jupyterlab==3.2.4
+  - uproot=4.1.*
+  - jupyterlab==3.2.*
+  - matplotlib==3.4.*
