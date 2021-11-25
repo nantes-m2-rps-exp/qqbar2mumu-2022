@@ -1,0 +1,6 @@
+name: qqbar2mumu
+channels:
+  - conda-forge
+dependencies:
+  - uproot=4.1.8
+  - jupyterlab==3.2.4
