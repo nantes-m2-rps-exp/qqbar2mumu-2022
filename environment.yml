@@ -5,3 +5,5 @@ dependencies:
   - uproot=4.1.*
   - jupyterlab==3.2.*
   - matplotlib==3.4.*
+  - hist==2.5.*
+  - vector==0.8.*
