@@ -19,7 +19,7 @@ Utiliser la commande git suivante :
 git clone https://github.com/nantes-m2-rps-exp/qqbar2mumu-2021.git
 ``` 
 
-Par défault, vous êtes sur la "master branch" du projet "origin". Pour pouvoir travailler sur le projet, vous devez "Fork" celui-ci en cliquant sur le bouton en haut à droite :
+Par défault, vous êtes sur la "master branch" du projet "origin". Pour pouvoir travailler sur le projet, vous devez effectuer un "Fork" de celui-ci en cliquant sur le bouton en haut à droite :
 
 ![screenshot git fork](./screenshot-git-fork.png)
 
@@ -27,15 +27,16 @@ Une fois le "Fork" réalisé, vous êtes en possession d'une copie complète du 
 
 ![screenshot git fork2](./screenshot-git-fork-2.png)
 
+Par la suite, l'adresse de votre projet sur Github (*https://github.com/"YOUR_GIT_USER_NAME"/qqbar2mumu-2021.git*) sera référencé par *myrepo*.
 En local sur votre machine, il faut maintenant accéder à cette copie. Pour cela, vous devez utiliser les commandes suivantes :
 
 ```shell
-git remote add myremote https://github.com/"YOUR_GIT_USER_NAME"/qqbar2mumu-2021.git
+git remote add myremote myrepo
 git fetch myrepo
 ```
 
-Ces deux commandes vous permettront de connecter votre environnement de travail local (votre machine) avec votre copie en ligne du projet (remote que vous avez "Fork").
-Pour lister les "remote" disponible, vous pouvez utiliser la commande :
+Ces deux commandes vous permettront de connecter votre environnement de travail local (votre machine) avec votre copie en ligne du projet (remote dont vous avez effectué "Fork").
+Pour lister les "remote" disponibles, vous pouvez utiliser la commande :
 
 ```shell
 git remote -v
