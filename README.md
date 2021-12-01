@@ -11,17 +11,19 @@ Pour ce projet le language de programmation choisi est Python. Nous recommandons
 Jupyter est un outil commun dans le domaine de la science des données. Il y a bien des façons d'utiliser Jupyter et de nombreux tutoriels sont disponibles en ligne pour aller plus loin, mais vous trouverez ci-dessous deux méthodes pour démarrer : une méthode locale et une méthode "cloud".
 
 ## Téléchargement du paquet
-> Si vous êtes capable de lire cette documentation, vous avez déjà un compte sur GitHub! Il s'agit bien evidemment d'un pré-requis pour le projet. Si ce n'est pas le cas, il faut passe par l'[installation de git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) sur votre machine. Dans la suite, nous tentons de vous fournir les commandes de base pour démarrer avec Git. Cependant, un nombre important de ressources documentaires et tutoriels sont disponibles sur le net pour approfondir votre maitrise de l'outil.
+> Si vous êtes capable de lire cette documentation, vous avez déjà un compte sur GitHub! Il s'agit bien évidemment d'un pré-requis pour le projet. Si ce n'est pas le cas, il faut passer par l'[installation de git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) sur votre machine. Dans la suite, nous tentons de vous fournir les commandes de base pour démarrer avec Git. Cependant, un nombre important de ressources documentaires et tutoriels sont disponibles sur le net pour approfondir votre maîtrise de l'outil.
 
 Utiliser la commande git suivante :
+
 ```shell
 git clone https://github.com/nantes-m2-rps-exp/qqbar2mumu-2021.git
 ``` 
-Par défault, vous êtes sur la "master branch" du projet "origin". Pour pouvoir travailler sur le projet, vous devez "Fork" celui-ci en cliquant sur le bouton en haut à gauche :
+
+Par défault, vous êtes sur la "master branch" du projet "origin". Pour pouvoir travailler sur le projet, vous devez "Fork" celui-ci en cliquant sur le bouton en haut à droite :
 
 ![screenshot git fork](./screenshot-git-fork.png)
 
-Une fois le "Fork" réalisé, vous êtes en possession d'une copie du projet sur laquelle vous pouvez travailler :
+Une fois le "Fork" réalisé, vous êtes en possession d'une copie complète du projet sur laquelle vous pouvez travailler :
 
 ![screenshot git fork2](./screenshot-git-fork-2.png)
 
@@ -39,44 +41,53 @@ Pour lister les "remote" disponible, vous pouvez utiliser la commande :
 git remote -v
 ```
 
-Lors du développement, il est FORTEMENT conseiller de ne pas travailler sur la branche "master" de votre "Fork" mais de créer une nouvelle branche par tâche
-Pour créer sa branche, vous pouvez utiliser la commande suivante :
+Lors du développement, il est FORTEMENT conseillé de ne pas travailler sur la branche "master" de votre "Fork" mais de créer une nouvelle branche par tâche.
+Pour créer une branche, vous pouvez utiliser la commande suivante :
 
 ```shell
 git checkout -b "YOUR_BRANCH_NAME"
 ```
 
-Vous êtes alors automatiquement positionné sur votre branche. Il est conseillé de choisir un nom de branche permettant d'identifier le créateur et contenant une indication sur la tache que vous souhaitez réaliser sur cette branche. Par exemple un nom de branche pourrait être "guilbaud_distmasseinvariante". Pour lister les branches disponibles :
+Vous êtes alors automatiquement positionné sur votre branche. Il est conseillé de choisir un nom de branche permettant d'identifier le créateur et contenant une indication sur la tâche que vous souhaitez réaliser sur cette branche. Par exemple un nom de branche pourrait être "guilbaud_distmasseinvariante". Pour lister les branches disponibles :
 
 ```shell
 git branch 
 ```
+
 Pour changer de branche :
 
 ```shell
 git checkout "BRANCH_NAME" 
 ```
+
 Vous pouvez maintenant commencer à travailler. Pour sauvegarder en local les changements sur vos fichiers, il faut utiliser les commandes :
+
 ```shell
 git add "FICHIER-X" "FICHIER-Y" FICHIER-Z"
 git commit -m "your message that explains what you have changed" 
 ```
-Pour savoir quels fichier ont été modifiés et ne sont pas encore sauvgarder par un commit :
+
+Pour savoir quels fichiers ont été modifiés et ne sont pas encore sauvegardés par un commit :
+
 ```shell
 git status
 ```
 
-Il est important de faire de "commit" le plus régulièrement possible. Cela permet de sauvgarder tout vos changement de revenir en arrière, etc. Lorsque vous êtes satisfait de votre avancé et à interval moins régulier, vous pouvez envoyer votre code sur votre remote.
+Il est important de faire des "commit" le plus régulièrement possible. Cela permet de sauvegarder tout vos changements, de revenir en arrière, etc. Lorsque vous êtes satisfait de votre avancée et à intervalle plus ou moins régulier, vous pouvez envoyer votre code sur votre remote.
+
 Pour cela :
 
 ```shell
 git push myremote
 ``` 
-Une fois la tache terminée, vous pouvez fusionner votre branche avec la "master" branche :
+
+Une fois la tâche terminée, vous pouvez fusionner votre branche avec la "master" branche (en rajoutant vos commits "au-dessus" de master) : 
 
 ```shell
 git checkout master
-git merge "YOUR_BRANCH_NAME"
+git pull --rebase
+git checkout "YOUR_BRANCH_NAME"
+git rebase master
 git push myrepo
 ```
 
