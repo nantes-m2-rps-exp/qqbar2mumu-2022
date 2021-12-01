@@ -74,7 +74,13 @@ git push myremote
 ``` 
 Une fois la tache terminée, vous pouvez fusionner votre branche avec la "master" branche :
 
+```shell
+git checkout master
+git merge "YOUR_BRANCH_NAME"
+git push myrepo
+```
 
+Enfin, pour intégrer vos changements au "master" project qqbar2mumu, il vous faudra faire une "pull request" en ligne.
 
 ## Installation locale (recommandée)
 
