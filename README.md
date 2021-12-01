@@ -10,6 +10,33 @@ Pour ce projet le language de programmation choisi est Python. Nous recommandons
 
 Jupyter est un outil commun dans le domaine de la science des données. Il y a bien des façons d'utiliser Jupyter et de nombreux tutoriels sont disponibles en ligne pour aller plus loin, mais vous trouverez ci-dessous deux méthodes pour démarrer : une méthode locale et une méthode "cloud".
 
+## Téléchargement du paquet
+> Si vous êtes capable de lire cette documentation, vous avez déjà un compte sur GitHub! Il s'agit bien evidemment d'un pré-requis pour le projet.
+
+Utiliser la commande git suivante :
+```shell
+git clone https://github.com/nantes-m2-rps-exp/qqbar2mumu-2021.git
+``` 
+Par défault, vous êtes sur la "master branch" du projet. Il est cependant fortement conseillé de travailler sur sa propre branche lors du développement.
+Pour créer sa branche, vous pouvez utiliser la commande suivante :
+
+```shell
+git checkout -b "YOUR_BRANCH_NAME"
+```
+
+Vous êtes alors automatiquement positionné sur votre branche. Il est conseillé de choisir un nom de branche permettant d'identifier le créateur et contenant une indication sur la tache que vous souhaitez réaliser sur cette branche. Par exemple un nom de branche pourrait être "guilbaud_distmasseinvariante". Pour lister les branches disponibles :
+
+```shell
+git branch 
+```
+Pour changer de branche :
+
+```shell
+git checkout "BRANCH_NAME" 
+```
+
+
+
 ## Installation locale (recommandée)
 
 Si possible, essayez d'installer Jupyter sur votre ordinateur (portable), car cela offre plus de souplesse (et potentiellement de performance).
