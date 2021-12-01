@@ -11,7 +11,7 @@ Pour ce projet le language de programmation choisi est Python. Nous recommandons
 Jupyter est un outil commun dans le domaine de la science des données. Il y a bien des façons d'utiliser Jupyter et de nombreux tutoriels sont disponibles en ligne pour aller plus loin, mais vous trouverez ci-dessous deux méthodes pour démarrer : une méthode locale et une méthode "cloud".
 
 ## Téléchargement du paquet
-> Si vous êtes capable de lire cette documentation, vous avez déjà un compte sur GitHub! Il s'agit bien évidemment d'un pré-requis pour le projet. Si ce n'est pas le cas, il faut passer par l'[installation de git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) sur votre machine. Dans la suite, nous tentons de vous fournir les commandes de base pour démarrer avec Git. Cependant, un nombre important de ressources documentaires et tutoriels sont disponibles sur le net pour approfondir votre maîtrise de l'outil.
+> Pour ce projet, vous utiliserez Git et GitHub. Si ce n'est pas déjà le cas, il vous faudra [installer git sur votre machine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) et vous [créér un compte GitHub](https://fr.wikihow.com/créer-un-compte-sur-GitHub). Dans la suite, nous tentons de vous fournir les commandes de base pour démarrer avec Git. Cependant, un nombre important de ressources documentaires et tutoriels sont disponibles sur le net pour approfondir votre maîtrise de l'outil.
 
 Utiliser la commande git suivante :
 
