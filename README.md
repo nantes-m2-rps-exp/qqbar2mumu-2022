@@ -64,7 +64,7 @@ git checkout "BRANCH_NAME"
 Vous pouvez maintenant commencer à travailler. Pour sauvegarder en local les changements sur vos fichiers, il faut utiliser les commandes :
 
 ```shell
-git add "FICHIER-X" "FICHIER-Y" FICHIER-Z"
+git add "FICHIER-X" "FICHIER-Y" "FICHIER-Z"
 git commit -m "your message that explains what you have changed" 
 ```
 
