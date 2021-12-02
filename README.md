@@ -1,7 +1,3 @@
-
-:warning: | WIP - ne pas utiliser avant la première scéance | :bangbang:
-:---: | :---: | :---:
-
 # Projet expérimental - Production de quarkonia
 
 > Ce dépot git héberge les fichiers nécessaires pour démarrer le projet "Production de quarkonia" du Master 2 RPS de l'Université de Nantes. Il est principalement à destination des étudiants qui réalisent ce projet. Le "vous" ci-dessous s'adresse donc à ces étudiants.
