@@ -89,7 +89,7 @@ git checkout master
 git pull --rebase
 git checkout "YOUR_BRANCH_NAME"
 git rebase master
-git push myrepo
+git push myremote
 ```
 
 Enfin, pour intégrer vos changements au "master" project qqbar2mumu, il vous faudra faire une "pull request" en ligne.
