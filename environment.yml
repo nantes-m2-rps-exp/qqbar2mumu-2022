@@ -7,3 +7,4 @@ dependencies:
   - matplotlib==3.4.*
   - hist==2.5.*
   - vector==0.8.*
+  - curl>=7.66
