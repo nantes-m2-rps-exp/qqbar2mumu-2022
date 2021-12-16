@@ -1,3 +1,5 @@
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 *.root
+.spack-env
+spack.lock
