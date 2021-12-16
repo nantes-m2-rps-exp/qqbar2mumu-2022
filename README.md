@@ -4,167 +4,18 @@
 
 Pour ce projet le language de programmation choisi est Python. Nous recommandons de l'utiliser par le biais de ["Notebooks Jupyter"](https://jupyter.org) qui permettent de mélanger le code, la documentation et les résultats de l'exécution du code.  
 
-Jupyter est un outil commun dans le domaine de la science des données. Il y a bien des façons d'utiliser Jupyter et de nombreux tutoriels sont disponibles en ligne pour aller plus loin, mais vous trouverez ci-dessous deux méthodes pour démarrer : une méthode locale et une méthode "cloud".
+Jupyter est un outil commun dans le domaine de la science des données. Il y a bien des façons d'utiliser Jupyter et de nombreux tutoriels sont disponibles en ligne pour aller plus loin, mais vous trouverez ci-dessous trois méthodes pour démarrer :
 
-## Téléchargement du paquet
+1. une [méthode locale basée sur conda](conda/README.md)
+2. une [méthode cloud](cloud/README.md)
+3. une [méthode locale basée sur multipass](multipass/README.md)
 
-> Pour ce projet, vous utiliserez Git et GitHub. Si ce n'est pas déjà le cas, il vous faudra [installer git sur votre machine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) et vous [créér un compte GitHub](https://fr.wikihow.com/créer-un-compte-sur-GitHub). Dans la suite, nous tentons de vous fournir les commandes de base pour démarrer avec Git. Cependant, un nombre important de ressources documentaires et tutoriels sont disponibles sur le net pour approfondir votre maîtrise de l'outil.
+A noter que seule la troisième méthode permet, a priori, de réaliser toutes les tâches nécessaires à ce projet, car elle offre des interfaces Python de paquets C++ développés spécifiquement pour ce projet, alors que les deux premières ne permettent d'accéder qu'à des paquets Python "génériques". Les deux premières méthodes permettent néanmoins de démarrer assez rapidement.
 
-Utiliser la commande git suivante :
+Pour ce projet, vous utiliserez également [Git](https://git.com) et [GitHub](https://github.com). Si ce n'est pas déjà le cas, il vous faudra [installer git sur votre machine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) et vous [créér un compte GitHub](https://fr.wikihow.com/créer-un-compte-sur-GitHub).
 
-```shell
-git clone https://github.com/nantes-m2-rps-exp/qqbar2mumu-2021.git
-```
+Comme pour Jupyter, un nombre important de ressources documentaires et tutoriels sont disponibles sur le net pour commencer avec git si c'est votre première approche ou encore pour approfondir votre maîtrise de cet outil si vous le connaissez déjà un peu.
 
-Par défault, vous êtes sur la "master branch" du projet "origin". Pour pouvoir travailler sur le projet, vous devez effectuer un "Fork" de celui-ci en cliquant sur le bouton en haut à droite :
+Vous trouverez dans le [document `git/README.md`](git/README.md) les commandes de base pour démarrer avec ce dépôt git en particulier.
 
-![screenshot git fork](./screenshot-git-fork.png)
-
-Une fois le "Fork" réalisé, vous êtes en possession d'une copie complète du projet sur laquelle vous pouvez travailler :
-
-![screenshot git fork2](./screenshot-git-fork-2.png)
-
-Par la suite, l'adresse de votre projet sur Github [https://github.com/"YOUR_GIT_USER_NAME"/qqbar2mumu-2021.git](https://github.com/"YOUR_GIT_USER_NAME"/qqbar2mumu-2021.git) sera référencée par *myrepo*.
-En local sur votre machine, il faut maintenant accéder à cette copie. Pour cela, vous devez utiliser les commandes suivantes :
-
-```shell
-git remote add myremote myrepo
-git fetch myrepo
-```
-
-Ces deux commandes vous permettront de connecter votre environnement de travail local (votre machine) avec votre copie en ligne du projet (remote dont vous avez effectué "Fork").
-Pour lister les "remote" disponibles, vous pouvez utiliser la commande :
-
-```shell
-git remote -v
-```
-
-Lors du développement, il est FORTEMENT conseillé de ne pas travailler sur la branche "master" de votre "Fork" mais de créer une nouvelle branche par tâche.
-Pour créer une branche, vous pouvez utiliser la commande suivante :
-
-```shell
-git checkout -b "YOUR_BRANCH_NAME"
-```
-
-Vous êtes alors automatiquement positionné sur votre branche. Il est conseillé de choisir un nom de branche permettant d'identifier le créateur et contenant une indication sur la tâche que vous souhaitez réaliser sur cette branche. Par exemple un nom de branche pourrait être "guilbaud_distmasseinvariante". Pour lister les branches disponibles :
-
-```shell
-git branch 
-```
-
-Pour changer de branche :
-
-```shell
-git checkout "BRANCH_NAME" 
-```
-
-Vous pouvez maintenant commencer à travailler. Pour sauvegarder en local les changements sur vos fichiers, il faut utiliser les commandes :
-
-```shell
-git add "FICHIER-X" "FICHIER-Y" "FICHIER-Z"
-git commit -m "your message that explains what you have changed" 
-```
-
-Pour savoir quels fichiers ont été modifiés et ne sont pas encore sauvegardés par un commit :
-
-```shell
-git status
-```
-
-Il est important de faire des "commit" le plus régulièrement possible. Cela permet de sauvegarder tout vos changements, de revenir en arrière, etc. Lorsque vous êtes satisfait de votre avancée et à intervalle plus ou moins régulier, vous pouvez envoyer votre code sur votre remote.
-
-Pour cela :
-
-```shell
-git push myremote
-```
-
-Une fois la tâche terminée, vous pouvez fusionner votre branche avec la "master" branche (en rajoutant vos commits "au-dessus" de master) :
-
-```shell
-git checkout master
-git pull --rebase
-git checkout "YOUR_BRANCH_NAME"
-git rebase master
-git push myremote
-```
-
-Enfin, pour intégrer vos changements au "master" project qqbar2mumu, il vous faudra faire une "pull request" en ligne.
-
-## Installation locale (recommandée)
-
-Si possible, essayez d'installer Jupyter sur votre ordinateur (portable), car cela offre plus de souplesse (et potentiellement de performance).
-
-Même si ce n'est pas la seule façon d'installation Jupyter et les dépendences nécessaires à ce projet (ou tout autre projet à base de Python), nous conseillons le recours à [conda](https://docs.conda.io), en particulier via sa version [miniforge](https://github.com/conda-forge/miniforge/#download).
-
-### Installation de miniforge (conda)
-
-Récupérer le [script d'installation](https://github.com/conda-forge/miniforge/#download) correspondant à votre plateforme et exécutez-le. Par exemple sous Linux :
-
-```shell
-bash Miniforge3-Linux-x86_64.sh
-```
-
-Suivez les instructions (en résumé : ENTER - SPACE - yes - ENTER - yes).
-
-A l'issue de cette étape la commande `conda` est maintenant disponible (vous devrez peut-être vous déconnecter et reconnecter pour la voir).
-
-```shell
-conda help
-```
-
-### Installation des paquets de base avec conda
-
-Ce dépot contient un fichier [`environment.yml`](environment.yml) qui décrit les dépendences utilisées par le notebook d'exemple (`muon-eta-distribution.ipynb`) que vous utiliserez pour vous mettre dans le bain.
-
-Avec conda (et plus généralement avec Python) il est très fortement recommandé de travailler dans un "environnement" (qui décrit un ensemble de modules Python et leurs versions respectives). Pour ce faire il faut installer l'environnement (une seule fois) :
-
-```shell
-conda env create
-```
-
-puis l'activer pour l'utiliser (à chaque connection/déconnection).
-
-```shell
-conda activate qqbar2mumu
-```
-
-Une fois l'environment activé, vous pouvez lancer Jupyter lab
-
-```shell
-jupyter lab
-```
-
-Ce qui lance une application web dans votre navigateur :
-
-![fenêtre initiale jupyter lab](./jupyter-lab-first-screen.png)
-
-Double-cliquez sur `muon-eta-distribution.ipynb` dans le panneau de gauche et vous êtes prêts à démarrer !
-Pensez à sauvgarder vos changements le plus souvant possible. Pour quitter le notebook, il suffit de faire "Fichier/LogOut".
-
-## Installation cloud
-
-Si vous ne trouvez vraiment aucun ordinateur sur lequel installer le projet, vous pouvez essayer de travailler directement en ligne. Il existe [plusieurs services](https://www.dataschool.io/cloud-services-for-jupyter-notebook/) en ligne qui offrent la possibilité d'exécuter des notebooks Jupyter.
-
-A titre d'exemple, le badge suivant devrait vous permettre d'ouvrir le notebook d'example dans un de ces sites, Binder. Attention : le démarrage peut être très lent, il faut être patient...
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nantes-m2-rps-exp/qqbar2mumu-2021/HEAD)
-
-## Téléchargement des données
-
-A terme, vous aurez besoin de passer sur l'ensemble des données que nous vous fournissons pour ce projet.
-Nous vous proposons un script shell d'exemple qui télécharge les données réelles (à vous de l'adapter, si nécessaire, notamment pour les données simulées) dans le sous répertoire `data`.
-
-```shell
-./copy-data-locally.sh run.list 
-```
-
-Le fichier `run.list` est un fichier texte qui contient la liste des numéros de runs (séparés par des virgules) à télécharger.
-
-Dans un premier temps vous pouvez commencer par télécharger quelques runs seulement.
-
-A noter :
-
-- le run 292397 est le plus gros mais est intéressant car il correspond en gros à la luminosité intégrée de l'analyse présentée dans le [papier d'Alice que nous vous fournissons comme référence
-- pour l'ensemble des 187 runs le transfert va prendre un certain temps, car il y a 25 Go à récupérer...
-
+Une fois la première installation réalisée, commencez par vous familiariser avec Jupyter en utilisant le [notebook d'exemple](notebooks/muon-eta-distribution.ipynb)

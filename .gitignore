@@ -3,3 +3,6 @@
 *.root
 .spack-env
 spack.lock
+curl.config.txt
+checksums.txt
+date-*.txt
