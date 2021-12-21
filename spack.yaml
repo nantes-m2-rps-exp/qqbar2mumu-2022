@@ -21,7 +21,5 @@ spack:
       version: [7.1.3]
   specs:
   - qqbar2mumu-2021@1.0.0
-  - mchtracking@0.1.0
-  - py-mchgeo@0.1.3
   concretization: together
   view: false
