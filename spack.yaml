@@ -23,5 +23,3 @@ spack:
   - qqbar2mumu-2021@1.0.0
   concretization: together
   view: false
-  mirrors:
-    localfilesystem: file:///home/ubuntu/mirror/
