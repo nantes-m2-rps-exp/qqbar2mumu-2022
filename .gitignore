@@ -6,3 +6,4 @@ spack.lock
 curl.config.txt
 checksums.txt
 date-*.txt
+cloud-init.yaml
