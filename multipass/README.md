@@ -109,7 +109,7 @@ To see these additional updates run: apt list --upgradable
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 
-📦qqbar2mumu-2021ubuntu@qqbar2mumu:~$
+📦qqbar2mumu-2022ubuntu@qqbar2mumu:~$
 ```
 
 </details>
@@ -119,9 +119,9 @@ See "man sudo_root" for details.
 Pour pouvoir utiliser l'ensemble des paquets Python utiles à ce projet, vous devrez, une fois connecté à la machine virtuelle, mettre en place l'environmment de la façon suivante :
 
 ```shell
-cd ~/nantes-m2-rps-exp/qqbar2mumu-2021
+cd ~/nantes-m2-rps-exp/qqbar2mumu-2022
 spacktivate . 
-spack load qqbar2mumu-2021
+spack load qqbar2mumu-2022
 ```
 
 ### Téléchargement des données
@@ -129,7 +129,7 @@ spack load qqbar2mumu-2021
 Si vous désirez seulement télécharger les données, il n'est pas nécessaire de mettre en place l'environnement comme ci-dessus, mais seulement d'exécuter le script de téléchargement :
 
 ```shell
-cd ~/nantes-m2-rps-exp/qqbar2mumu-2021/data
+cd ~/nantes-m2-rps-exp/qqbar2mumu-2022/data
 ./copy-data-locally.sh
 ```
 

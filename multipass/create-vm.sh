@@ -19,11 +19,11 @@ NCORES=${2:-${DEFAULT_CPU}}
 MEM=${3:-$DEFAULT_MEM}
 DISK=${4:-64}
 
-MIRROR_URL=https://cernbox.cern.ch/index.php/s/nxqonRKkT7178DG/download
+MIRROR_URL=https://cernbox.cern.ch/remote.php/dav/public-files/nxqonRKkT7178DG/mirror.tar.gz
 TARGET=haswell
 
 if [ "$(uname -p)" == "arm" ]; then
-  MIRROR_URL=https://cernbox.cern.ch/index.php/s/u8aCYh5fdB0Viuf/download
+  MIRROR_URL=https://cernbox.cern.ch/remote.php/dav/public-files/DJKPVrXQtVIfjQv/mirror-arm.tar.gz
   TARGET=aarch64
 fi
 
@@ -45,7 +45,7 @@ time multipass exec ${NAME} -- bash -c "spack/bin/spack spec zlib"
 multipass exec ${NAME} -- bash -c "spack/bin/spack buildcache keys --install --trust"
 
 # launch the installation (from the build cache)
-time multipass exec ${NAME} -- bash -c ". ~/spack/share/spack/setup-env.sh && spack env activate ~/nantes-m2-rps-exp/qqbar2mumu-2021 && time spack install --fail-fast"
+time multipass exec ${NAME} -- bash -c ". ~/spack/share/spack/setup-env.sh && spack env activate ~/nantes-m2-rps-exp/qqbar2mumu-2022 && time spack install --fail-fast"
 
 multipass transfer profile ${NAME}:.profile
 

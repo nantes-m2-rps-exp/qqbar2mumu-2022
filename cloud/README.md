@@ -4,5 +4,5 @@ Si vous ne trouvez vraiment aucun ordinateur sur lequel installer le projet, vou
 
 L badge suivant devrait vous permettre d'ouvrir le notebook d'exemple dans un de ces sites, Binder. Attention : le démarrage peut être très lent, il faut être patient...
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nantes-m2-rps-exp/qqbar2mumu-2021/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nantes-m2-rps-exp/qqbar2mumu-2022/HEAD)
 
