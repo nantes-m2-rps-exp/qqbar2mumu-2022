@@ -11,7 +11,13 @@ On accèdera à la machine virtuelle Ubuntu, depuis le système hôte (macOS, Li
 
 ## Installation de Multipass
 
-Suivez les instructions d'installation sur le site [multipass](https://multipass.run), en fonction de votre type de système d'exploitation.
+Suivez les instructions d'installation sur le site [multipass](https://multipass.run), en fonction de votre type de système d'exploitation. Vérifiez que vous avez récupéré la version `1.10.1` en utilisant la commande `multipass version`. Ce qui donne par exemple (sur un Mac) : 
+
+```shell
+$ multipass --version
+multipass   1.10.1+mac
+multipassd  1.10.1+mac
+```
 
 ## Installation de la machine virtuelle
 
@@ -30,18 +36,30 @@ gpg: inserting ownertrust of 6
 Dans votre cas la clé gpg sera différente, c'est normal.
 
 <details>
+<summary>Occupation disque</summary>
+
+Le script `create-vm.sh` va créer par défaut une machine virtuelle qui utilise 64 Go de disque, la moitié de la mémoire disponible sur la machine, et la moitié des CPUs.
+Si vous voulez allouer moins de ressources à la machine virtuelle, vous pouvez fournir des paramètres au script. Par exemple pour créer une machine virtuelle avec 4 coeurs, 8 Go de RAM et 24 Go de disque :
+```
+./create-vm.sh cpus mem disk
+./create-vm.sh 4 8G 24
+```
+</details>
+
+<details>
 <summary>Cela devrait prendre une dizaine de minutes</summary>
 
 Le temps exact d'installation dépend de la vitesse de votre connection internet : le script télécharge en effet une image Ubuntu (c'est la partie Multipass), puis une archive contenant tous les paquets binaires à installer dans la machine virtuelle (c'est la partie Spack).
 </details>
 
-Vérifier que la machine virtuelle a bien été créée (l'address réseau IPv4 peut être différente dans votre, ce n'est pas un problème) :
+Vérifier que la machine virtuelle a bien été créée (l'address réseau IPv4 peut être différente dans votre cas, par exemple du style `192.168.xxx.yyy`, ce n'est pas un problème) :
 
 ```shell
 $ multipass list
 Name                    State             IPv4             Image
-qqbar2mumu              Running           172.16.81.14     Ubuntu 20.04 LTS
+qqbar2mumu              Running           172.16.81.14     Ubuntu 22.04 LTS
 ```
+
 
 ## Utilisation de la machine virtuelle pour démarrer un serveur Jupyter Lab
 
@@ -87,25 +105,30 @@ Auquel cas vous "entrez" dans la machine virtuelle :
 
 ```shell
 $ multipass shell qqbar2mumu
-Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-91-generic x86_64)
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-52-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
 
- System information as of Thu Dec 23 17:20:14 CET 2021
+  System information as of Wed Nov  9 17:16:18 CET 2022
 
- System load:  0.01              Processes:               169
- Usage of /:   3.3% of 61.86GB   Users logged in:         0
- Memory usage: 2%                IPv4 address for enp0s2: 172.16.81.15
- Swap usage:   0%
+  System load:             0.0
+  Usage of /:              8.8% of 61.84GB
+  Memory usage:            4%
+  Swap usage:              0%
+  Processes:               156
+  Users logged in:         0
+  IPv4 address for enp0s2: 192.168.64.3
+  IPv6 address for enp0s2: fdc4:3947:59f1:829f:3cc6:d1ff:feec:d24d
 
 
-11 updates can be applied immediately.
+5 updates can be applied immediately.
 4 of these updates are standard security updates.
 To see these additional updates run: apt list --upgradable
 
 
+Last login: Wed Nov  9 16:58:52 2022 from 192.168.64.1
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 
