@@ -9,7 +9,7 @@ Nous vous proposons différents types de données qui vous permettrons d'obtenir
 Lors du dévelopement de vos notebooks, vous pouvez facilement télécharger un petit jeu de données (typiquement un run) au début de votre notebook en utilisant une commande du type : 
 
 ```shell
-#!curl 'https://cernbox.cern.ch/index.php/s/r7VFXonK39smzKP/download?path=291694/AnalysisResults.root' > run291694.data.root
+#!curl 'https://cernbox.cern.ch/remote.php/dav/public-files/JIjQaAYEQnmRDkX/291694/AnalysisResults.root' > run291694.data.root
 ```
 
 A terme cependant, vous aurez besoin de passer sur l'ensemble des données que nous vous fournissons pour ce projet, et pour cela il est plus judicieux de les télécharger avant de lancer un notebook.
