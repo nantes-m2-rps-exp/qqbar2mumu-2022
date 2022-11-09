@@ -12,7 +12,7 @@ rm -f checksums.txt
 cat ${checksums_template} | sed s+DESTDIR+${dest_dir}+ > checksums.txt
 
 for run in $(cat $runlist | tr "," " "); do
-  src="https://cernbox.cern.ch/index.php/s/r7VFXonK39smzKP/download?path=${run}/AnalysisResults.root"
+  src="https://cernbox.cern.ch/remote.php/dav/public-files/JIjQaAYEQnmRDkX/${run}/AnalysisResults.root"
   dest="${dest_dir}/run${run}.data.root"
   transfert="yes"
   if test -f $dest; then
