@@ -12,9 +12,9 @@ mkdir -p $dest_dir || exit
 rm -f checksums.${type}.txt
 cat ${checksums_template} | sed s+DESTDIR+${dest_dir}+ > checksums.${type}.txt
 
-baselink="https://cernbox.cern.ch/remote.php/dav/public-files/JIjQaAYEQnmRDkX/"
-if [ "$type" = "mc" ]; then
-	baselink="https://cernbox.cern.ch/remote.php/dav/public-files/aCVOXHKOKNOpWDP"
+baselink="https://cernbox.cern.ch/remote.php/dav/public-files/JIjQaAYEQnmRDkX"
+if [ "$type" == "mc" ]; then
+	baselink="https://cernbox.cern.ch/remote.php/dav/public-files/nbPmKbcsJvZrjjx"
 fi
 
 for run in $(cat $runlist | tr "," " "); do
