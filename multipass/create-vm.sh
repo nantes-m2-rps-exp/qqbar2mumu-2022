@@ -36,7 +36,7 @@ time multipass launch --name ${NAME} \
  --mem ${MEM} \
  --disk ${DISK}G \
  --cloud-init ./cloud-init.yaml \
- --timeout 1200
+ --timeout 1800
 
 # boostrap spack by requesting a spec
 time multipass exec ${NAME} -- bash -c "spack/bin/spack spec zlib"
