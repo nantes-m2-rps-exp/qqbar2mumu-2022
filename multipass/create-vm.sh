@@ -19,7 +19,9 @@ NCORES=${2:-${DEFAULT_CPU}}
 MEM=${3:-$DEFAULT_MEM}
 DISK=${4:-64}
 
-MIRROR_URL=https://cernbox.cern.ch/remote.php/dav/public-files/FdiQvgmSRKsnmxi/mirror.tar.gz
+#MIRROR_URL=https://cernbox.cern.ch/remote.php/dav/public-files/FdiQvgmSRKsnmxi/mirror.tar.gz
+MIRROR_URL=https://cernbox.cern.ch/remote.php/dav/public-files/MIPkpzOfNpNMtXB/mirror-1.tar.gz
+
 TARGET=haswell
 
 if [ "$(uname -p)" == "arm" ]; then
