@@ -2,7 +2,7 @@ type=${1:-data}
 runlist=${2:-run.list}
 out=${3:-curl.config.${type}.txt}
 checksums_template=${4:-checksums.${type}.txt.ini}
-dest_dir=${5:-/data}
+dest_dir=${5:-/home/jimushoko/Documents/Cours/Projet_Expérimental/qqbar2mumu-2022/data_dl}
 
 command -v md5 > /dev/null && MD5COMMAND=md5 || MD5COMMAND=md5sum
 
